@@ -91,7 +91,7 @@
                 if realBall:GetAttribute('target') == myName then
                     if (realBall.Position - character.HumanoidRootPart.Position).Magnitude <= 25 then
                         closeRangecount = closeRangecount + 1
-                        if closeRangecount >= 4 then
+                        if closeRangecount >= 6 then
                             spamCase = true
                         end
                         parry()
