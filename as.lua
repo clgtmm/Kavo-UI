@@ -97,10 +97,6 @@
                             spamCase = true
                         end
                         parryButton:Fire()
-                        vu:CaptureController()
-                        vu:Button1Down(Vector2.new(1, 1))
-                        vim:SendMouseButtonEvent(1, 1, 0, true, game, 1)
-                        vim:SendMouseButtonEvent(1, 1, 0, false, game, 1)
                     else
                         closeRangecount = 0
                         spamCase = false
