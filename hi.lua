@@ -161,7 +161,7 @@
 
                     character.HumanoidRootPart.CFrame = CFrame.new(
                         Vector3.new(
-                            ball.Position.X, ball:GetAttribute("minHeight") - 5, ball.Position.Z
+                            ball.Position.X, ball:GetAttribute("minHeight") - 8, ball.Position.Z
                         ) 
                     )
                 end
