@@ -117,6 +117,7 @@
 
     getgenv().HeartbeatConnection = game:GetService("RunService").Heartbeat:Connect(function(v)
         if spamCase then
+            if currentBallspeed <= 0 then return; end
             parry()
                         parryButton:Fire()
                         vu:CaptureController()
