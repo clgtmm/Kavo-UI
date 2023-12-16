@@ -77,7 +77,10 @@
 
     local realBall = ballFolder:GetChildren()[1]
     local fakeBall = ballFolder:GetChildren()[2]
-
+    ballFolder.ChildRemoved:Connect(function()
+        closeRangecount = 0
+        spamCase = false
+    end)
     ballFolder.ChildAdded:Connect(function(v)
         closeRangecount = 0
         spamCase = false
@@ -86,7 +89,7 @@
 
             targetConnection = realBall:GetAttributeChangedSignal("target"):Connect(function()
                 if realBall:GetAttribute('target') == myName then
-                    if (realBall.Position - character.HumanoidRootPart.Position).Magnitude <= 28 then
+                    if (realBall.Position - character.HumanoidRootPart.Position).Magnitude <= 25 then
                         closeRangecount = closeRangecount + 1
                         if closeRangecount >= 4 then
                             spamCase = true
@@ -102,7 +105,7 @@
                         spamCase = false
                     end
                 else
-                    if (realBall.Position - character.HumanoidRootPart.Position).Magnitude > 28 then
+                    if (realBall.Position - character.HumanoidRootPart.Position).Magnitude > 25 then
                         closeRangecount = 0
                         spamCase = false
                     end
