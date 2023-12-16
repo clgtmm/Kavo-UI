@@ -79,6 +79,8 @@
     local fakeBall = ballFolder:GetChildren()[2]
 
     ballFolder.ChildAdded:Connect(function(v)
+        closeRangecount = 0
+        spamCase = false
         realBall = ballFolder:GetChildren()[1]
         fakeBall = ballFolder:GetChildren()[2]
 
